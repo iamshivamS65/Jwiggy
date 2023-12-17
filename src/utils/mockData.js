@@ -1,7 +1,7 @@
 
 
 const resList=[
-    {
+   {
       "info": {
         "id": "254024",
         "name": "McDonald's",
@@ -106,7 +106,7 @@ const resList=[
         "link": "https://www.swiggy.com/restaurants/mcdonalds-indirapuram-ghaziabad-noida-1-254024",
         "type": "WEBLINK"
       }
-    },
+    }, 
     {
       "info": {
         "id": "60642",

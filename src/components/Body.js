@@ -5,20 +5,32 @@ import { useState } from "react";
 
 
 const Body =() => {
-
+    
+    //Local state variable- super powerful variable
+    const [listOfRestaurants, setListOfRestaurants] = useState(resList);
+   
     
     return(
         <div className="body">
             <div className="filter">
-               
+            <button className="filter-btn" 
+            onClick={()=>{
+            const filteredList = listOfRestaurants.filter(
+            (res) => res.info.avgRating > 4
+        );
+        setListOfRestaurants(filteredList);
+    }}>Top Rated Restaurants</button>
+
             </div>
             <div className="res-container">
 
               {/* Here we will loop over resList to automatically display all the restaurantCard */}
 
-              {resList.map((restaurant)=>(
-              <RestaurantCard key={restaurant.info.id} resData={restaurant} />
-              ))}
+              {
+              listOfRestaurants.map((restaurant)=>(
+              <RestaurantCard key={restaurant.id} resData={restaurant} />
+              ))
+              }
                 {/* <RestaurantCard
                     resData={resList[0]}
                     />
